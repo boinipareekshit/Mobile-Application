@@ -462,6 +462,8 @@ public class MobileMarket {
 				obj.gstbill(discount_bill);
 				break;
 			}
+			System.out.println("==============Thanks a lot Please vist again=======================================");
+
 			
 		}
 
