@@ -455,6 +455,7 @@ public class MobileMarket {
 				break;
 			}
 			System.out.println("would you like to order any other items sir y/n");
+			System.out.println("would you like to order any other items sir y/n");
 			String dec1=sc.nextLine();
 			if(dec1.equals("n")) {
 				discount_bill=obj.discountbill(obj.sum);
