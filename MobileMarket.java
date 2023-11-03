@@ -19,10 +19,35 @@ class mobileBrands{
 		return 0;
 		
 	}
+	
+		
+	public void partten() {
+		int s=1;
+		for(int i=1;i<=3;i++) {
+			for( s=i;s<3;s++) {
+				System.out.print(" ");
+			}
+			for(int j=1;j<=i;j++) { 
+				if(i==1)
+				System.out.print(" D ");
+				else if(i==2&&j==1)
+					System.out.print("y  ");
+				else if(i==2&&j==2)
+					System.out.print(" R ");
+				else if(i==3&&j==1)
+					System.out.print("H  ");
+				else if(i==3&&j==2)
+					System.out.print("   A ");
+			}
+			System.out.println(" ");
+		}
+	}
 	public void gstbill(double result) {
 		double gst=result*(18/100.0);
+		System.out.println();
 		System.out.println("your total bill after discount is "+result);
 		result=result+gst;
+		System.out.println();
 		System.out.println("you are total bill with gst is "+result);
 	}
 	
@@ -67,15 +92,15 @@ class mobileBrands{
 		
 		
 		System.out.println("\nsno. Brand    models   prices    quantity\n"
-				+ "1.  Samsung   S23      1,00,000   "+s23+"\n"
-				+ "2.  Samsung   S23FE    60,000     "+s23fe+"\n"
-				+ "3.  Samsung   z Flip5  1,00,000   "+zflip5+"\n"
-				 +"4.  Samsung   z Fold5  90,000     "+zfold5+"\n"
+				+ "1.  Samsung   S23      1,00,000   "+(s23>0?s23:"Out of stock")+"\n"
+				+ "2.  Samsung   S23FE    60,000     "+(s23fe>0?s23fe:"Out of stock")+"\n"
+				+ "3.  Samsung   z Flip5  1,00,000   "+(zflip5>0?zflip5:"Out of stock")+"\n"
+				 +"4.  Samsung   z Fold5  90,000     "+(zfold5>0?zfold5:"Out of stock")+"\n"
 				 +"5. Exit()s");
 //				 System.out.println("5.  Samsung   A34      30,000     "+a34+"\n"
 //				+ "6.  Samsung   M34      20,000     "+m34+"\n"
 //				+ "7.  Samsung   F21      15,000     "+f21);
-		
+		System.out.println("Select a model which you want to buy in Samsung ");
 		int samsungmodels=sc.nextInt();
 		switch(samsungmodels) {
 		case 1:
@@ -86,6 +111,10 @@ class mobileBrands{
 				int res=qsams23*100000;
 				bill(res);
 			
+			}
+			else if(s23<=0) {
+				System.out.println("out of stock");
+				Samsung();
 			}
 			else {
 			
@@ -143,8 +172,9 @@ class mobileBrands{
 	}
 	public void onePlus(){
 		 
-		System.out.println("\nsno. Brand    models    prices   quantity\n1.   onePlus   11       60,000     "+o11q+"\n2.   onePlus   11R      44,000     "+o11rq+""
-				+ "\n3.   onePlus   Nord 3   30,000     "+on3q+"\n4.   onePlus   10 pro   52,000     "+o10proq+"\n5.   Exit()");
+		System.out.println("\nsno. Brand    models    prices   quantity\n1.   onePlus   11       60,000     "+(o11q>0?o11q:"Out of stock")+"\n2.   onePlus   11R      44,000     "+(o11rq>0?o11rq:"Out of stock")+""
+				+ "\n3.   onePlus   Nord 3   30,000     "+(on3q>0?on3q:"Out of stock")+"\n4.   onePlus   10 pro   52,000     "+(o10proq>0?o10proq:"Out of stock")+"\n5.   Exit()");
+		System.out.println("Select a model which you want to buy in One plus ");
 		int onePlusmodels=sc.nextInt(); 
 		switch(onePlusmodels) {
 		case 1:
@@ -206,8 +236,9 @@ class mobileBrands{
 	}
 	public void iphone(){
 		
-		System.out.println("\nsno. Brand    models   prices   quantity\n1.   Iphone   13       50,000     "+a13q+"\n2.   Iphone   14       60,000     "+a14q+""
-				+ "\n3.   Iphone   15       80,000     "+a15q+"\n4.   Iphone   15 pro   1,30,000   "+a15proq+"\n5.   Exit()");
+		System.out.println("\nsno. Brand    models   prices   quantity\n1.   Iphone   13       50,000     "+(a13q>0?a13q:"Out of stock")+"\n2.   Iphone   14       60,000     "+(a14q>0?a14q:"Out of stock")+""
+				+ "\n3.   Iphone   15       80,000     "+(a15q>0?a15q:"Out of stock")+"\n4.   Iphone   15 pro   1,30,000   "+(a15proq>0?a15proq:"Out of stock")+"\n5.   Exit()");
+		System.out.println("Select a model which you want to buy in IPhone ");
 		int iphonemodels=sc.nextInt(); 
 		switch(iphonemodels) {
 		case 1:
@@ -270,8 +301,9 @@ class mobileBrands{
 	}
 	public void oppo(){
 		
-		System.out.println("\nsno. Brand    models     prices   quantity\n1.   Oppo     N3 Flip    95,000     "+opN3q+"\n2.   Oppo     N2 Flip    70,000     "+opN2q+""
-				+ "\n3.   Oppo     Reno 10    30,000     "+op10renoq+"\n4.   Oppo     A79        20,000     "+opa79q+"\n5.   Exit()");
+		System.out.println("\nsno. Brand    models     prices   quantity\n1.   Oppo     N3 Flip    95,000     "+(opN3q>0?opN3q:"Out of stock")+"\n2.   Oppo     N2 Flip    70,000     "+(opN2q>0?opN2q:"Out of stock")+""
+				+ "\n3.   Oppo     Reno 10    30,000     "+(op10renoq>0?op10renoq:"Out of stock")+"\n4.   Oppo     A79        20,000     "+(opa79q>0?opa79q:"Out of stock")+"\n5.   Exit()");
+		System.out.println("Select a model which you want to buy in Oppo ");
 		int oppomodels=sc.nextInt(); 
 		switch(oppomodels) {
 		case 1:
@@ -335,7 +367,8 @@ class mobileBrands{
 	public void nothing(){
 		
 		
-		System.out.println("\nsno. Brand    models      prices   quantity\n1.   nothing  Phone(1)    25,000     "+Np1q+"\n2.   nothing  Phone(2)    40,000     "+Np2q+"\n3.   exit()");
+		System.out.println("\nsno. Brand    models      prices   quantity\n1.   nothing  Phone(1)    25,000     "+(Np1q>0?Np1q:"Out of stock")+"\n2.   nothing  Phone(2)    40,000     "+(Np2q>0?Np2q:"Out of stock")+"\n3.   exit()");
+		System.out.println("Select a model which you want to buy in Nothing ");
 		int nothingmodels=sc.nextInt(); 
 		switch(nothingmodels) {
 		case 1:
@@ -382,7 +415,12 @@ public class MobileMarket {
 		Scanner sc=new Scanner(System.in);
 		int mobilebrand;
 		int result=0;
+		System.out.println("WELCOME TO HYDRA MOBILES");
+		System.out.println("");
+		obj.partten();
+		System.out.println("");
 		while(true) {
+			System.out.println("Choose a brand which u want to have");
 			mobilebrand=obj.mobiles();
 			switch(mobilebrand) {
 			case 1:
